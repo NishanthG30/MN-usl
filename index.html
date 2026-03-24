@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For You 💜</title>
   <link rel="stylesheet" href="MN.css">
 </head>
 
 <body>
-  <img src="WhatsApp Image 2026-03-24 at 10.24.16 PM.jpeg" class="full-img" alt="Beautiful memory">
-   <img src="WhatsApp Image 2026-03-24 at 10.24.16 PM.jpeg" alt="">
+
+<img src="WhatsApp Image 2026-03-24 at 10.24.16 PM.jpeg" class="bg-img" alt="Memory">
 
 <div class="card">
   <h1>Will You Be Mine Forever? 💜</h1>
   <p>You are my happiness, my peace, my everything 💜</p>
 
   <div class="btn-area">
-    <!-- <button id="yesBtn">Yes 💜</button> -->
     <button id="yesBtn" onclick="window.location.href='MN2.html'">
-  Yes 💜
-</button>
+      Yes 💜
+    </button>
   </div>
 </div>
+
 <script>
   const btn = document.getElementById("yesBtn");
   const area = document.querySelector(".btn-area");
@@ -30,16 +31,14 @@
     const btnWidth = btn.offsetWidth;
     const btnHeight = btn.offsetHeight;
 
-    const maxX = areaRect.width - btnWidth;
-    const maxY = areaRect.height - btnHeight;
-
-    const x = Math.random() * maxX;
-    const y = Math.random() * maxY;
+    const x = Math.random() * (areaRect.width - btnWidth);
+    const y = Math.random() * (areaRect.height - btnHeight);
 
     btn.style.left = x + "px";
     btn.style.top = y + "px";
     btn.style.transform = "none";
   });
 </script>
+
 </body>
 </html>
