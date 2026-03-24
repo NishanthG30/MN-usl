@@ -1,0 +1,150 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Full background image */
+.full-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 800px;
+  margin-top: -870px;
+  object-fit: cover;
+  filter: brightness(0.6);
+  z-index: -1;
+  animation: fadeInBg 2s ease-in-out;
+}
+img{
+  margin-top: -180px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  filter: brightness(0.6);
+  z-index: -1;
+  animation: fadeInBg 2s ease-in-out;
+}
+/* Center card */
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  color: white;
+  width: 500px;
+
+  animation: floatCard 3s ease-in-out infinite, fadeIn 2s ease;
+}
+
+/* Heading */
+.card h1 {
+  margin-bottom: 15px;
+  animation: slideDown 1.5s ease;
+}
+
+/* Paragraph */
+.card p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  animation: fadeIn 2s ease;
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #ebebeb;
+  color:#9333ea;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button hover */
+button:hover {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  background: #9333ea;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #c084fc;
+}
+
+/* Animations */
+
+/* Fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Background fade */
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide down */
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Floating effect */
+@keyframes floatCard {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+/* Button play area */
+.btn-area {
+  position: relative;
+  width: 100%;
+  height: 150px; /* fixed space for movement */
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Button */
+#yesBtn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
