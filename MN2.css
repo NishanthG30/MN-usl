@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  padding: 20px;
+
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(2, 166, 161, 0.062)),
+    url("loop-symbol-inspirational-view.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 350px;
+
+  padding: 20px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+
+  text-align: center;
+  color: black;
+  font-weight: bold;
+
+  box-shadow: 0 0 25px rgba(85, 185, 247, 0.4);
+  text-shadow: 0 0 8px rgba(85, 185, 247, 0.4);
+
+  animation: fadeIn 2s ease, float 4s ease-in-out infinite;
+}
+
+/* Image */
+.card img {
+  width: 100%;
+  height: auto; /* responsive */
+  max-height: 250px;
+
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+/* Poem */
+.poem {
+  font-size: 14px;
+  line-height: 1.6;
+
+  white-space: pre-line;
+
+  border-right: 2px solid white;
+  overflow: hidden;
+
+  display: inline-block;
+  max-width: 100%;
+
+  animation: typing 10s steps(300, end), blink 1s infinite;
+}
+
+/* 📱 Mobile tweaks */
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .poem {
+    font-size: 13px;
+  }
+}
+
+/* 📲 Tablet */
+@media (min-width: 768px) {
+  .card {
+    max-width: 420px;
+  }
+
+  .poem {
+    font-size: 16px;
+  }
+}
+
+/* 💻 Large screens */
+@media (min-width: 1024px) {
+  .card {
+    max-width: 450px;
+  }
+
+  .poem {
+    font-size: 17px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
